@@ -1,0 +1,8 @@
+<h1>Аvailable products:</h1>
+ 
+
+<% @products.each do |product| %>
+  <p>
+      <strong><%= product.title %></strong><br />
+      <%= product.description %>
+ <% end %>
