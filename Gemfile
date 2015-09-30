@@ -14,7 +14,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6c32f64f8b0e43592f37a534ab0e6896e1a4f5ca
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -35,6 +38,9 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 gem "paperclip", "~> 4.3"
+gem 'twitter-bootstrap-rails'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
