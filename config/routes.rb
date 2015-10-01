@@ -4,15 +4,16 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'products#index'
   resources :products
+  root 'products#index'
+  
   
   get 'signup'  => 'users#new' 
   resources :users
 
- get 'login' => 'sessions#new'
- post 'login' => 'sessions#create'
- delete 'logout' => 'sessions#destroy'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
 
 
   
