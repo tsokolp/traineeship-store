@@ -7,18 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
   <div class='container'>
     <div class='row'>
       <div class="col-md-4"></div>
       <div class="col-md-4">
-        <% if current_user %> 
-          <%= current_user.name %> |
-          <%= link_to "Log out", logout_path, method: "delete" %>
-          <hr>
-        <% else %> 
-          <%= link_to "Login", 'login' %></a> |
-          <%= link_to "Signup", 'signup' %></a>
-        <% end %>
+        <div class="notice"><%= notice %></div>
+        <div class="alert"><%= alert %></div>
+        <!--<% if current_user %> -->
+        <!--  <%= current_user.name %> |-->
+        <!--  <%= link_to "Log out", logout_path, method: "delete" %>-->
+        <!--  <hr>-->
+        <!--<% else %> -->
+        <!--  <%= link_to "Login", 'login' %></a> |-->
+        <!--  <%= link_to "Signup", 'signup' %></a>-->
+        <!--<% end %>-->
   
         <%= yield %>
       </div>

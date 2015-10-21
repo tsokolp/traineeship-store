@@ -3,4 +3,6 @@ class Product < ActiveRecord::Base
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   validates :title, presence: true,
                     length: { minimum: 5 }
+                    
+  resourcify
 end
