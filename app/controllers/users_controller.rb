@@ -12,6 +12,10 @@ class UsersController < ApplicationController
 		render template: 'knfwonm7vaol2xxe9vtm/new_shopkeeper'
 	end
 	
+	def new_guest
+		render template: 'kvt09peb5k2zue1h6qxg/new_guest'
+	end
+	
 	
 	
 	def create

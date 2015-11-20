@@ -22,6 +22,9 @@ Rails.application.routes.draw do
   get 'knfwonm7vaol2xxe9vtm/new_shopkeeper' => 'users#new_shopkeeper'
   post 'knfwonm7vaol2xxe9vtm/new_shopkeeper' => 'users#create'
   
+  get 'kvt09peb5k2zue1h6qxg/new_guest' => 'users#new_guest'
+  post 'kvt09peb5k2zue1h6qxg/new_guest' => 'users#create'
+  
 
 
   
