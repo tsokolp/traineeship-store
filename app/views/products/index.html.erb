@@ -2,13 +2,13 @@
   <p>
     <%= link_to 'Add product', new_product_path %> 
   </p>
-  
+  <br />
   
   <% @products.each do |product| %>
-    <br />
     <p>
-        <%= image_tag product.image.url(:thumb)  %> <br />
-        <strong><%= product.title %></strong>     <br />
+        <p><strong><%= product.title %></strong></p>
+        <p><%= image_tag product.image.url(:thumb)  %></p>
+        
         <%= product.description %><br />
         <%= link_to 'View', product_path(product) %> |
         <%= link_to 'Edit', edit_product_path(product) %>
