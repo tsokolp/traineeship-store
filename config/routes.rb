@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+  
+  
+  get 'hfh6mdrxw2vwaj5oegy9/new_admin' => 'users#new_admin'
+  post 'hfh6mdrxw2vwaj5oegy9/new_admin' => 'users#create'
 
 
   

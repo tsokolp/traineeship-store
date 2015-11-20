@@ -3,6 +3,10 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 	
+	def new_admin
+		render template: 'hfh6mdrxw2vwaj5oegy9/new_admin'
+	end
+	
 	def create
 		@user = User.new(user_params)
 		if @user.save
@@ -15,7 +19,7 @@ class UsersController < ApplicationController
 	
 	private
 		def user_params
-			params.require(:user).permit(:name, :email, :password)
+			params.require(:user).permit(:name, :email, :password, :role)
 		end
 		
 	
