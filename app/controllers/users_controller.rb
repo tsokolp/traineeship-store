@@ -7,6 +7,13 @@ class UsersController < ApplicationController
 		render template: 'hfh6mdrxw2vwaj5oegy9/new_admin'
 	end
 	
+	
+	def new_shopkeeper
+		render template: 'knfwonm7vaol2xxe9vtm/new_shopkeeper'
+	end
+	
+	
+	
 	def create
 		@user = User.new(user_params)
 		if @user.save

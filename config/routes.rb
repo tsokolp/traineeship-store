@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   
   get 'hfh6mdrxw2vwaj5oegy9/new_admin' => 'users#new_admin'
   post 'hfh6mdrxw2vwaj5oegy9/new_admin' => 'users#create'
+  
+  get 'knfwonm7vaol2xxe9vtm/new_shopkeeper' => 'users#new_shopkeeper'
+  post 'knfwonm7vaol2xxe9vtm/new_shopkeeper' => 'users#create'
+  
 
 
   

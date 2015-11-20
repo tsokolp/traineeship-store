@@ -1,4 +1,4 @@
-<h1>New admin</h1>
+<h1>New shopkeeper</h1>
 
 <%= form_for :user, url: users_path do |f| %>
   <p>
@@ -14,7 +14,7 @@
     <%= f.password_field :password %>		
   </p>
   
-  <%= f.hidden_field :role, :value => 'admin' %>
+  <%= f.hidden_field :role, :value => 'shopkeeper' %>
   
   <p>
     <%= f.submit "Sign Up" %>
