@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration
       t.text :description
       t.attachment :image
       t.string :category
+      t.boolean :pro
 
       t.timestamps null: false
     end

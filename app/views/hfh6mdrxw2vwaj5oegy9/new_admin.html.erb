@@ -6,12 +6,29 @@
     <%= f.text_field :name %>
   </p>
   <p>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :_last_name %>
+  </p>
+  
+  <p>
     <%= f.label :email %><br>
     <%= f.email_field :email %>
   </p>
+  <p> 
+    <%= f.label :birthday %><br />
+    <%= date_select("user", "birthday", order: [:day, :month, :year], start_year: 1955) %>
+  </p>  
   <p>
     <%= f.label :password %><br>
     <%= f.password_field :password %>		
+  </p>
+  <p>
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+  </p>
+  <p>
+    <%= f.label :passport %><br>
+    <%= f.file_field :passport %>
   </p>
   
   <%= f.hidden_field :role, :value => 'admin' %>

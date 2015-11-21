@@ -21,17 +21,28 @@ ActiveRecord::Schema.define(version: 20150927123055) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "category"
+    t.boolean  "pro"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
+    t.string   "last_name"
     t.string   "email"
+    t.date     "birthday"
     t.string   "password_digest"
     t.string   "role"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string   "passport_file_name"
+    t.string   "passport_content_type"
+    t.integer  "passport_file_size"
+    t.datetime "passport_updated_at"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
 end
