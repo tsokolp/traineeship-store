@@ -4,12 +4,14 @@ class UsersController < ApplicationController
 	end
 	
 	def new_admin
+		@user = Admin.new
 		render template: 'hfh6mdrxw2vwaj5oegy9/new_admin'
 	end
 	
 	
 	def new_shopkeeper
 		render template: 'knfwonm7vaol2xxe9vtm/new_shopkeeper'
+		#@user = Shopkeeper.new
 	end
 	
 	def new_guest
@@ -19,19 +21,40 @@ class UsersController < ApplicationController
 	
 	
 	def create
-		#render plain: params[:user].inspect
-		@user = User.new(user_params)
-		if @user.save
-			session[:user_id] = @user.id
-			redirect_to '/'
-		else
-			redirect_to 'signup'
+		#render plain: params
+		if params['shopkeeper']
+			@user = Shopkeeper.new(shopkeeper_params)
+		elsif params['admin']
+			@user = Admin.new(admin_params)
+			if @user.save
+				session[:user_id] = @user.id
+				redirect_to '/'
+			else
+				render '/hfh6mdrxw2vwaj5oegy9/new_admin'
+		# 	end
+		# else
+		# 	@user = User.new(user_params)
+		# end
+		# if @user.save
+		# 	session[:user_id] = @user.id
+		# 	redirect_to '/'
+		# else
+		# 	redirect_to 'signup'
+			end
 		end
 	end
 	
 	private
 		def user_params
-			params.require(:user).permit(:name, :last_name, :email, :birthday, :password, :role, :avatar, :passport)
+			params.require(:user).permit(:name, :last_name, :email, :password, :role, :avatar)
+		end
+		
+		def admin_params
+			params.require('admin').permit(:name, :last_name, :email, :birthday, :password, :role, :avatar, :passport)
+		end
+		
+		def shopkeeper_params
+			params.require(:user).permit(:name, :last_name, :email, :password, :store, :avatar, :role)
 		end
 		
 	

@@ -35,6 +35,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem "paperclip", "~> 4.3"
 gem 'twitter-bootstrap-rails'
 gem 'rubocop'
+gem "dynamic_form"
+gem 'date_validator'
 
 
 

@@ -1,13 +1,14 @@
 <h1>New admin</h1>
 
-<%= form_for :user, url: users_path do |f| %>
+<%= form_for @user, url: users_path do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </p>
   <p>
     <%= f.label :last_name %><br>
-    <%= f.text_field :_last_name %>
+    <%= f.text_field :last_name %>
   </p>
   
   <p>
@@ -16,7 +17,7 @@
   </p>
   <p> 
     <%= f.label :birthday %><br />
-    <%= date_select("user", "birthday", order: [:day, :month, :year], start_year: 1955) %>
+    <%= date_select("admin", "birthday", :order => [:day, :month, :year], :start_year => 1955, :default => nil, :include_blank => true) %>
   </p>  
   <p>
     <%= f.label :password %><br>
@@ -31,7 +32,7 @@
     <%= f.file_field :passport %>
   </p>
   
-  <%= f.hidden_field :role, :value => 'admin' %>
+    <%= f.hidden_field :role, :value => 'admin' %>
   
   <p>
     <%= f.submit "Sign Up" %>

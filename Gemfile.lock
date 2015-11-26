@@ -56,7 +56,10 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
+    date_validator (0.8.1)
+      activemodel
     debug_inspector (0.0.2)
+    dynamic_form (1.1.4)
     erubis (2.7.0)
     execjs (2.6.0)
     globalid (0.3.6)
@@ -175,6 +178,8 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
   coffee-rails (~> 4.1.0)
+  date_validator
+  dynamic_form
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.3)

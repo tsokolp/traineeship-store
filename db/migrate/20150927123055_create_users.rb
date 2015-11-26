@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.date :birthday
       t.string :password_digest
       t.string :role
+      t.string :store
       t.attachment :avatar
       t.attachment :passport
       

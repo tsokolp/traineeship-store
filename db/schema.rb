@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20150927123055) do
     t.date     "birthday"
     t.string   "password_digest"
     t.string   "role"
+    t.string   "store"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
